@@ -138,15 +138,16 @@ void Roster::printData() {
 
 void Roster::printAverageDaysInCourse(std::string studentID) {
     bool studentExists = false;
-    for(int i = 0; i < classSize; ++i) {
-        if(classRosterArray[i] != nullptr && classRosterArray[i]->getStudentID() == studentID) {
+    for (int i = 0; i < classSize; ++i) {
+        if (classRosterArray[i] != nullptr && classRosterArray[i]->getStudentID() == studentID) {
             studentExists = true;
             int* days = classRosterArray[i]->getDaysToCompleteCourse();
             double average = (days[0] + days[1] + days[2]) / 3.0;
-            std::cout << "Average days to complete course: " << average << std::endl;
+            std::cout << "Student ID: " << studentID << ", Average number of days in the three courses: " << average << std::endl;
+            break; 
         }
     }
-    if(!studentExists) {
+    if (!studentExists) {
         std::cout << "Student not found" << std::endl;
     }
 }
