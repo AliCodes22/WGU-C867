@@ -29,10 +29,10 @@ void Roster::parseData(std::string studentData) {
         classRosterArray[index] = new Student();
 
 
-        // extract the substring upto the first comma to get the student id
+        // extract the substring upto the first comma to get the studentID
         int currentPos = studentData.find(",");
-        studentId = studentData.substr(0, currentPos);
-        classRosterArray[index]->setStudentId(studentId);
+        studentID = studentData.substr(0, currentPos);
+        classRosterArray[index]->setStudentID(studentID);
 
         // here the starting position is from the previous position upto the next comma for firstName
         int startPos = currentPos + 1;

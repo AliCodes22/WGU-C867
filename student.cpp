@@ -109,7 +109,7 @@ void Student::print() {
 		degree = "No degree found";
 	}
 
- 	cout << studentId
+ 	cout << studentID
 		<< "   First Name: " << getFirstName()
 		<< "   Last Name: " << getLastName()
 		<< "   Age: " << getAge() << "  "
