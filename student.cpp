@@ -7,7 +7,7 @@
 using namespace std;
 
 Student::Student() {
-    this->studentId = "";
+    this->studentID = "";
     this->firstName = "";
     this->lastName = "";
     this->email = "";
@@ -18,8 +18,8 @@ Student::Student() {
     this->degreeProgram = SOFTWARE;
 }
 
-Student::Student(string studentId, string firstName, string lastName, string email, int age, int daysToCompleteCourse[3], DegreeProgram degreeProgram) {
-    this->studentId = studentId;
+Student::Student(string studentID, string firstName, string lastName, string email, int age, int daysToCompleteCourse[3], DegreeProgram degreeProgram) {
+    this->studentID = studentID;
     this->firstName = firstName;
     this->lastName = lastName;
     this->email = email;
@@ -31,8 +31,8 @@ Student::Student(string studentId, string firstName, string lastName, string ema
 }
 
 // Mutators
-void Student::setStudentId(string id) {
-    this->studentId = id;
+void Student::setStudentID(string studentID) {
+    this->studentID = studentID ;
 }
 
 void Student::setFirstName(string firstName) {
@@ -64,8 +64,8 @@ void Student::setDegreeProgram(DegreeProgram degreeProgram) {
 
 // Getters
 
-string Student::getStudentId() {
-    return this -> studentId;
+string Student::getStudentID() {
+    return this -> studentID;
 }
 
 

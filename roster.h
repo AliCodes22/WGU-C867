@@ -16,11 +16,11 @@ class Roster {
 		Student* classRosterArray[5];
 		Roster(int size);
 
-		std::string getStudentId(int index);
+		std::string getStudentID(int index);
 		void parseData(std::string studentData);
-		void remove(std::string studentId);
+		void remove(std::string studentID);
 		void printData();
-		void printAverageDaysInCourse(std::string studentId);
+		void printAverageDaysInCourse(std::string studentID);
 		void printInvalidEmails();
 
 
@@ -32,7 +32,7 @@ class Roster {
 		int classSize;
 		int index;
 
-		void add(std:: string studentId, std::string firstName, std::string lastName, std::string email, int age, int day1, int day2, int day3, DegreeProgram degreeProgram);
+		void add(std:: string studentID, std::string firstName, std::string lastName, std::string email, int age, int day1, int day2, int day3, DegreeProgram degreeProgram);
 
 		~Roster();
 

@@ -16,13 +16,13 @@ Roster::Roster(int size) {
 
 
 // returns student id based on the index provided
-std::string Roster::getStudentId(int index) {
-    std::string studentId = classRosterArray[index]->getStudentId();
-    return studentId;
+std::string Roster::getStudentID(int index) {
+    std::string studentID = classRosterArray[index]->getStudentID();
+    return studentID;
 }
 
 void Roster::parseData(std::string studentData) {
-    std::string studentId, firstName, lastName, email;
+    std::string studentID, firstName, lastName, email;
     int age, day1, day2, day3;
 
     if (index < classSize) {
@@ -107,13 +107,13 @@ void Roster::add(std::string studentID, std::string firstName, std::string lastN
     }
 }
 
-void Roster::remove(std::string studentId) {
+void Roster::remove(std::string studentID) {
     bool studentFound = false;
     for(int i = 0; i < classSize; i++) {
         // if the student exists without a null value AND has an existing student id, delete the entry
-        if(classRosterArray[i] != nullptr && classRosterArray[i]->getStudentId() == studentId) {
+        if(classRosterArray[i] != nullptr && classRosterArray[i]->getStudentID() == studentID) {
             studentFound = true;
-            std::cout << "Student: " << classRosterArray[i]->getStudentId() << " " 
+            std::cout << "Student: " << classRosterArray[i]->getStudentID() << " " 
               << classRosterArray[i]->getFirstName() << " " 
               << classRosterArray[i]->getLastName() << " will be removed from the roster" << std::endl;            
               delete classRosterArray[i];
@@ -136,10 +136,10 @@ void Roster::printData() {
     }
 }
 
-void Roster::printAverageDaysInCourse(std::string studentId) {
+void Roster::printAverageDaysInCourse(std::string studentID) {
     bool studentExists = false;
     for(int i = 0; i < classSize; ++i) {
-        if(classRosterArray[i] != nullptr && classRosterArray[i]->getStudentId() == studentId) {
+        if(classRosterArray[i] != nullptr && classRosterArray[i]->getStudentID() == studentID) {
             studentExists = true;
             int* days = classRosterArray[i]->getDaysToCompleteCourse();
             double average = (days[0] + days[1] + days[2]) / 3.0;

@@ -13,7 +13,7 @@ class Student {
 
         private:
                 // declaring variables for Student class
-                std::string studentId;
+                std::string studentID;
                 std::string firstName;
                 std::string lastName;
                 std::string email;
@@ -26,11 +26,11 @@ class Student {
         public: 
                 Student();
                 
-                Student(std::string studentId, std:: string firstName, std::string lastName, std::string email, int age, int daysToCompleteCourse[3], DegreeProgram degreeProgram);
+                Student(std::string studentID, std:: string firstName, std::string lastName, std::string email, int age, int daysToCompleteCourse[3], DegreeProgram degreeProgram);
                 
 
                 // getters
-                std::string getStudentId();
+                std::string getStudentID();
                 std::string getFirstName();
                 std::string getLastName();
                 std::string getEmail();
@@ -40,12 +40,12 @@ class Student {
 
                 // mutators
 
-                void setStudentId(std::string id);
+                void setStudentID(std::string studentID);
                 void setFirstName(std::string firstName);
                 void setLastName(std::string lastName);
                 void setEmail(std::string email);
                 void setAge(int age);
-                        void setDaysToCompleteCourse(int day1, int day2, int day3);
+                void setDaysToCompleteCourse(int day1, int day2, int day3);
                 void setDegreeProgram(DegreeProgram degreeProgram);
 
 

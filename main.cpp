@@ -49,7 +49,7 @@ int main()
 
     // printing average days in course for each student
     for (int i = 0; i < 5; i++) {
-        classRoster->printAverageDaysInCourse(classRoster->getStudentId(i));
+        classRoster->printAverageDaysInCourse(classRoster->getStudentID(i));
     }
     
 
